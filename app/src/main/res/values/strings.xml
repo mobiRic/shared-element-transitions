@@ -6,4 +6,7 @@
     <string name="title_1">Basic Initial List</string>
     <string name="desc_1">No Shared Element Transition animations</string>
 
+    <string name="title_2">Basic Transitions</string>
+    <string name="desc_2">Intro to Shared Element Transition animations</string>
+
 </resources>

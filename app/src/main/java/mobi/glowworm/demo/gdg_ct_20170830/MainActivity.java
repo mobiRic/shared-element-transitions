@@ -8,6 +8,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 
 import mobi.glowworm.demo.gdg_ct_20170830._1_basic_initial_list.ItemListActivity_1;
+import mobi.glowworm.demo.gdg_ct_20170830._2_basic_transitions.ItemListActivity_2;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -28,6 +29,10 @@ public class MainActivity extends AppCompatActivity {
 
     public void onClick_1(View view) {
         launchActivity(ItemListActivity_1.class);
+    }
+
+    public void onClick_2(View view) {
+        launchActivity(ItemListActivity_2.class);
     }
 
 }
