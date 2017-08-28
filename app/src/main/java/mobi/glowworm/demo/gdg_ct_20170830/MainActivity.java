@@ -7,6 +7,8 @@ import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 
+import mobi.glowworm.demo.gdg_ct_20170830._1_basic_initial_list.ItemListActivity_1;
+
 public class MainActivity extends AppCompatActivity {
 
     @Override
@@ -25,7 +27,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void onClick_1(View view) {
-        launchActivity(ItemListActivity.class);
+        launchActivity(ItemListActivity_1.class);
     }
 
 }

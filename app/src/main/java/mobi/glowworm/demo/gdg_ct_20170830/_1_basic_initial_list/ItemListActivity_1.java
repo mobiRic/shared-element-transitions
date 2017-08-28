@@ -1,4 +1,4 @@
-package mobi.glowworm.demo.gdg_ct_20170830;
+package mobi.glowworm.demo.gdg_ct_20170830._1_basic_initial_list;
 
 import android.content.Context;
 import android.content.Intent;
@@ -16,22 +16,24 @@ import android.widget.TextView;
 
 import java.util.List;
 
+import mobi.glowworm.demo.gdg_ct_20170830.R;
+import mobi.glowworm.demo.gdg_ct_20170830._1_basic_initial_list.ItemDetailFragment_1;
 import mobi.glowworm.demo.gdg_ct_20170830.dummy.DummyContent;
 
 /**
  * An activity representing a list of Items. This activity
  * has different presentations for handset and tablet-size devices. On
  * handsets, the activity presents a list of items, which when touched,
- * lead to a {@link ItemDetailActivity} representing
+ * lead to a {@link ItemDetailActivity_1} representing
  * item details. On tablets, the activity presents the list of items and
  * item details side-by-side using two vertical panes.
  */
-public class ItemListActivity extends AppCompatActivity {
+public class ItemListActivity_1 extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_item_list);
+        setContentView(R.layout.activity_item_list_1);
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         toolbar.setTitle(R.string.title_1);
@@ -68,7 +70,7 @@ public class ItemListActivity extends AppCompatActivity {
         @Override
         public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
             View view = LayoutInflater.from(parent.getContext())
-                    .inflate(R.layout.item_list_content, parent, false);
+                    .inflate(R.layout.item_list_content_1, parent, false);
             return new ViewHolder(view);
         }
 
@@ -82,8 +84,8 @@ public class ItemListActivity extends AppCompatActivity {
                 @Override
                 public void onClick(View v) {
                     Context context = v.getContext();
-                    Intent intent = new Intent(context, ItemDetailActivity.class);
-                    intent.putExtra(ItemDetailFragment.ARG_ITEM_ID, holder.mItem.id);
+                    Intent intent = new Intent(context, ItemDetailActivity_1.class);
+                    intent.putExtra(ItemDetailFragment_1.ARG_ITEM_ID, holder.mItem.id);
 
                     context.startActivity(intent);
                 }
