@@ -5,7 +5,7 @@
     android:layout_height="wrap_content"
     android:orientation="vertical"
     android:padding="16dp"
-    tools:context="mobi.glowworm.demo.gdg_ct_20170830.ItemDetailFragment">
+    tools:context="mobi.glowworm.demo.gdg_ct_20170830._1_basic_initial_list.ItemDetailFragment_1">
 
     <TextView
         android:id="@+id/item_header"

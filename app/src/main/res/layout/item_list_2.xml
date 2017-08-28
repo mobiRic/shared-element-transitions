@@ -9,5 +9,5 @@
                                         android:layout_marginLeft="16dp"
                                         android:layout_marginRight="16dp"
                                         app:layoutManager="LinearLayoutManager"
-                                        tools:context="mobi.glowworm.demo.gdg_ct_20170830.ItemListActivity"
-                                        tools:listitem="@layout/item_list_content"/>
+                                        tools:context="mobi.glowworm.demo.gdg_ct_20170830._2_basic_transitions.ItemListActivity_2"
+                                        tools:listitem="@layout/item_list_content_2"/>

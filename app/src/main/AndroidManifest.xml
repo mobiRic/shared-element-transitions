@@ -15,8 +15,10 @@
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
+
+        <!--Basic Initial List-->
         <activity
-            android:name=".ItemListActivity"
+            android:name="._1_basic_initial_list.ItemListActivity_1"
             android:parentActivityName=".MainActivity"
             android:theme="@style/AppTheme.NoActionBar">
             <meta-data
@@ -24,13 +26,32 @@
                 android:value="mobi.glowworm.demo.gdg_ct_20170830.MainActivity"/>
         </activity>
         <activity
-            android:name=".ItemDetailActivity"
+            android:name="._1_basic_initial_list.ItemDetailActivity_1"
             android:label="@string/title_item_detail"
-            android:parentActivityName=".ItemListActivity"
+            android:parentActivityName="._1_basic_initial_list.ItemListActivity_1"
             android:theme="@style/AppTheme.NoActionBar">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="mobi.glowworm.demo.gdg_ct_20170830.ItemListActivity"/>
+                android:value="mobi.glowworm.demo.gdg_ct_20170830._1_basic_initial_list.ItemListActivity_1"/>
+        </activity>
+
+        <!--Basic Transitions-->
+        <activity
+            android:name="._2_basic_transitions.ItemListActivity_2"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="mobi.glowworm.demo.gdg_ct_20170830.MainActivity"/>
+        </activity>
+        <activity
+            android:name="._2_basic_transitions.ItemDetailActivity_2"
+            android:label="@string/title_item_detail"
+            android:parentActivityName="._2_basic_transitions.ItemListActivity_2"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="mobi.glowworm.demo.gdg_ct_20170830._2_basic_transitions.ItemListActivity_2"/>
         </activity>
 
     </application>

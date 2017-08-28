@@ -1,4 +1,4 @@
-package mobi.glowworm.demo.gdg_ct_20170830;
+package mobi.glowworm.demo.gdg_ct_20170830._2_basic_transitions;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -10,18 +10,20 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.app.ActionBar;
 import android.view.MenuItem;
 
+import mobi.glowworm.demo.gdg_ct_20170830.R;
+
 /**
  * An activity representing a single Item detail screen. This
  * activity is only used narrow width devices. On tablet-size devices,
  * item details are presented side-by-side with a list of items
- * in a {@link ItemListActivity}.
+ * in a {@link ItemListActivity_2}.
  */
-public class ItemDetailActivity extends AppCompatActivity {
+public class ItemDetailActivity_2 extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_item_detail);
+        setContentView(R.layout.activity_item_detail_2);
         Toolbar toolbar = (Toolbar) findViewById(R.id.detail_toolbar);
         setSupportActionBar(toolbar);
 
@@ -53,9 +55,9 @@ public class ItemDetailActivity extends AppCompatActivity {
             // Create the detail fragment and add it to the activity
             // using a fragment transaction.
             Bundle arguments = new Bundle();
-            arguments.putString(ItemDetailFragment.ARG_ITEM_ID,
-                    getIntent().getStringExtra(ItemDetailFragment.ARG_ITEM_ID));
-            ItemDetailFragment fragment = new ItemDetailFragment();
+            arguments.putString(ItemDetailFragment_2.ARG_ITEM_ID,
+                    getIntent().getStringExtra(ItemDetailFragment_2.ARG_ITEM_ID));
+            ItemDetailFragment_2 fragment = new ItemDetailFragment_2();
             fragment.setArguments(arguments);
             getSupportFragmentManager().beginTransaction()
                     .add(R.id.item_detail_container, fragment)
@@ -73,7 +75,7 @@ public class ItemDetailActivity extends AppCompatActivity {
             //
             // http://developer.android.com/design/patterns/navigation.html#up-vs-back
             //
-            navigateUpTo(new Intent(this, ItemListActivity.class));
+            navigateUpTo(new Intent(this, ItemListActivity_2.class));
             return true;
         }
         return super.onOptionsItemSelected(item);
