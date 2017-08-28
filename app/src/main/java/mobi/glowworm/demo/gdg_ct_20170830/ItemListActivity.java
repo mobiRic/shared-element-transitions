@@ -34,9 +34,9 @@ public class ItemListActivity extends AppCompatActivity {
         setContentView(R.layout.activity_item_list);
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        toolbar.setTitle(R.string.title_1);
+        toolbar.setSubtitle(R.string.desc_1);
         setSupportActionBar(toolbar);
-        toolbar.setTitle(R.string.title_item_list);
-        toolbar.setSubtitle(R.string.app_name);
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
