@@ -1,4 +1,9 @@
 <resources>
-    <string name="app_name">Shared Transition Animations</string>
+    <string name="app_name">201708 GDG Cape Town</string>
+    <string name="title_item_list">Shared Element Transitions</string>
     <string name="title_item_detail">Item Detail</string>
+
+    <string name="title_1">Basic Initial List</string>
+    <string name="desc_1">No Shared Element Transition animations</string>
+
 </resources>
