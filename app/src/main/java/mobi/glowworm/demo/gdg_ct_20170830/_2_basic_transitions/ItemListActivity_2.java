@@ -6,6 +6,8 @@ import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
+import android.support.v4.app.ActivityOptionsCompat;
+import android.support.v4.util.Pair;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
@@ -14,6 +16,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import mobi.glowworm.demo.gdg_ct_20170830.R;
@@ -86,7 +89,21 @@ public class ItemListActivity_2 extends AppCompatActivity {
                     Intent intent = new Intent(context, ItemDetailActivity_2.class);
                     intent.putExtra(ItemDetailFragment_2.ARG_ITEM_ID, holder.mItem.id);
 
-                    context.startActivity(intent);
+                    // specify shared elements to transition
+                    List<Pair<View, String>> pairs = new ArrayList<>();
+                    if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.LOLLIPOP) {
+                        pairs.add(
+                                Pair.create(
+                                        (View) holder.mContentView,
+                                        getString(R.string.transition_item_header_2)));
+                    }
+
+                    // this call handles unsupported SDK versions
+                    ActivityOptionsCompat options =
+                            ActivityOptionsCompat.makeSceneTransitionAnimation(ItemListActivity_2.this,
+                                    pairs.toArray(new Pair[pairs.size()]));
+
+                    context.startActivity(intent, options.toBundle());
                 }
             });
         }

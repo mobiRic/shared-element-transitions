@@ -12,7 +12,9 @@
         style="?android:attr/textAppearanceLarge"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="16dp"/>
+        android:layout_marginBottom="16dp"
+        android:transitionName="@string/transition_item_header_2"
+        tools:targetApi="lollipop"/>
 
     <TextView
         android:id="@+id/item_detail"
