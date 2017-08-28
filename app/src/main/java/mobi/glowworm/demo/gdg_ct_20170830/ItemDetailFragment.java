@@ -1,8 +1,8 @@
 package mobi.glowworm.demo.gdg_ct_20170830;
 
 import android.app.Activity;
-import android.support.design.widget.CollapsingToolbarLayout;
 import android.os.Bundle;
+import android.support.design.widget.CollapsingToolbarLayout;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -49,7 +49,7 @@ public class ItemDetailFragment extends Fragment {
             Activity activity = this.getActivity();
             CollapsingToolbarLayout appBarLayout = (CollapsingToolbarLayout) activity.findViewById(R.id.toolbar_layout);
             if (appBarLayout != null) {
-                appBarLayout.setTitle(mItem.content);
+                appBarLayout.setTitle(getString(R.string.title_item_detail));
             }
         }
     }
@@ -61,6 +61,7 @@ public class ItemDetailFragment extends Fragment {
 
         // Show the dummy content as text in a TextView.
         if (mItem != null) {
+            ((TextView) rootView.findViewById(R.id.item_header)).setText(mItem.content);
             ((TextView) rootView.findViewById(R.id.item_detail)).setText(mItem.details);
         }
 
