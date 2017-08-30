@@ -54,6 +54,25 @@
                 android:value="mobi.glowworm.demo.gdg_ct_20170830._2_basic_transitions.ItemListActivity_2"/>
         </activity>
 
+        <!--Polished Basics-->
+        <activity
+            android:name="._3_polished_basics.ItemListActivity_3"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="mobi.glowworm.demo.gdg_ct_20170830.MainActivity"/>
+        </activity>
+        <activity
+            android:name="._3_polished_basics.ItemDetailActivity_3"
+            android:label="@string/title_item_detail"
+            android:parentActivityName="._3_polished_basics.ItemListActivity_3"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="mobi.glowworm.demo.gdg_ct_20170830._3_polished_basics.ItemListActivity_3"/>
+        </activity>
+
     </application>
 
 </manifest>
