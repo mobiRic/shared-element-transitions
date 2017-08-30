@@ -13,5 +13,6 @@
     <string name="title_3">Polished Basics</string>
     <string name="desc_3">Fixing some of the glitches in the basic implementation</string>
     <string name="transition_item_header_3">transition_item_header_3</string>
+    <string name="transition_toolbar_3">transition_toolbar_3</string>
 
 </resources>

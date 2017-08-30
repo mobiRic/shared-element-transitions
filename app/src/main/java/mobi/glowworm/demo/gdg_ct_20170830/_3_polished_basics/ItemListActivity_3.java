@@ -14,6 +14,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.Window;
 import android.widget.TextView;
 
 import java.util.ArrayList;
@@ -96,6 +97,32 @@ public class ItemListActivity_3 extends AppCompatActivity {
                                 Pair.create(
                                         (View) holder.mContentView,
                                         getString(R.string.transition_item_header_3)));
+
+                        /*
+                        This following code is part of a big workaround to prevent the transition animation from
+                        drawing over the window decor views i.e. status bar & navigation bar.
+
+                        http://stackoverflow.com/a/26748694/383414
+                        */
+                        View toolbar = findViewById(R.id.app_bar);
+                        pairs.add(
+                                Pair.create(
+                                        toolbar,
+                                        getString(R.string.transition_toolbar_3)));
+                        View statusBar = findViewById(android.R.id.statusBarBackground);
+                        if (statusBar != null) {
+                            pairs.add(
+                                    Pair.create(
+                                            statusBar,
+                                            Window.STATUS_BAR_BACKGROUND_TRANSITION_NAME));
+                        }
+                        View navigationBar = findViewById(android.R.id.navigationBarBackground);
+                        if (navigationBar != null) {
+                            pairs.add(
+                                    Pair.create(
+                                            navigationBar,
+                                            Window.NAVIGATION_BAR_BACKGROUND_TRANSITION_NAME));
+                        }
                     }
 
                     // this call handles unsupported SDK versions
